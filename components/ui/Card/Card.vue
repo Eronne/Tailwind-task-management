@@ -11,8 +11,8 @@ withDefaults(
   }>(),
   {
     classes: () => ({
-      wrapper: 'overflow-hidden border border-gray-200 rounded-lg bg-white',
-      body: '',
+      wrapper: 'border border-gray-200 rounded-lg bg-white',
+      body: 'rounded-lg',
     }),
   },
 )
