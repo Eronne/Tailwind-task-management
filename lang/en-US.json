@@ -4,7 +4,12 @@
   },
   "pages": {
     "home": {
-      "title": "Home"
+      "head": {
+        "title": "Home"
+      },
+      "title": "No task to do | One task to do | {count} tasks to do",
+      "add-task": "Add Task",
+      "no-tasks": "No tasks to display"
     }
   }
 }

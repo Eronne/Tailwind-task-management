@@ -4,7 +4,12 @@
   },
   "pages": {
     "home": {
-      "title": "Accueil"
+      "head": {
+        "title": "Accueil"
+      },
+      "title": "Aucune tâche à effectuer | Une tâche à effectuer | {count} tâches à effectuer",
+      "add-task": "Ajouter une tâche",
+      "no-task": "Commencez par ajouter une tâche"
     }
   }
 }
