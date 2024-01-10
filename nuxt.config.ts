@@ -1,10 +1,10 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
-    '@pinia/nuxt',
     'nuxt-icon',
     '@nuxtjs/i18n',
     '@nuxtjs/google-fonts',
+    '@vueuse/nuxt',
   ],
   i18n: {
     langDir: './lang',

@@ -1,7 +1,7 @@
 # Tailwind task Management
 
 ## Introduction
-This app was created based on those [instructions](https://sandy-gatsby-552.notion.site/Test-Task-e10de2df2ddd459ea3895c94260c3847).
+This app was created based on those [instructions](https://sandy-gatsby-552.notion.site/Test-Task-e10de2df2ddd459ea3895c94260c3847). It uses [useStorage](https://vueuse.org/core/useStorage/) to persist tasks in the app.
 
 Application is deployed on Vercel and can be accessed [here](https://tailwind-task-management.vercel.app/). 
 
