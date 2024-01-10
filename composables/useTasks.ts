@@ -14,7 +14,7 @@ const state = useStorage<{ tasks: Task[] }>('use-tasks', {
 export default () => {
   const addTask = ({ name, description }: AddTaskParams) => {
     state.value.tasks.push({
-      id: String(Math.random()),
+      id: String(Math.round(Math.random() * 100000)),
       name,
       description,
       status: TaskStatus.ToDo,
