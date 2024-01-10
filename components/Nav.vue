@@ -4,6 +4,13 @@ import { Bars3Icon } from '@heroicons/vue/24/outline'
 defineProps<{
   navigation: any[]
 }>()
+
+const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+
+const availableLocales = computed(() => {
+  return (locales.value).filter(i => i.code !== locale.value)
+})
 </script>
 
 <template>
@@ -21,12 +28,22 @@ defineProps<{
     </div>
 
     <!-- Desktop -->
-    <div class="hidden lg:flex lg:gap-x-12">
-      <template v-for="item in navigation" :key="item.title">
-        <NuxtLink :to="item.to" class="text-sm font-semibold leading-6 text-gray-900">
-          {{ item.title }}
-        </NuxtLink>
-      </template>
+    <div class="flex align-middle">
+      <div class="hidden mr-4 lg:flex lg:gap-x-12">
+        <template v-for="item in navigation" :key="item.title">
+          <NuxtLink :to="item.to" class="text-sm font-semibold leading-6 text-gray-900">
+            {{ item.title }}
+          </NuxtLink>
+        </template>
+      </div>
+
+      <NuxtLink
+        v-for="locale in availableLocales"
+        :key="locale.code"
+        :to="switchLocalePath(locale.code)"
+      >
+        <span class="text-xs uppercase">{{ locale.code }}</span>
+      </NuxtLink>
     </div>
   </nav>
 </template>

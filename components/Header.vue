@@ -1,6 +1,7 @@
 <script setup lang="ts">
+const { t } = useI18n()
 const navigation = [
-  { title: 'Home', to: '/' },
+  { title: t('layouts.default.navigation.home'), to: '/' },
 ]
 </script>
 
