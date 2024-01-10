@@ -50,13 +50,15 @@ const statusesItems: SelectItem[] = [
           </p>
 
           <div class="flex align-middle">
-            <Select v-model="task.status" :items="statusesItems" class="mr-2" />
+            <Select v-model="task.status" :items="statusesItems" class="hidden mr-2 sm:block" />
 
             <Button variant="ghost" @click="deleteTask(task)">
               <Icon name="heroicons:x-mark-20-solid" class="h-5 w-5" />
             </Button>
           </div>
         </div>
+
+        <Select v-model="task.status" :items="statusesItems" class="mb-3 sm:hidden" />
 
         <p class="text-sm">
           {{ task.description }}
