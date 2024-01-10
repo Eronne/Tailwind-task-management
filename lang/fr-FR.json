@@ -1,6 +1,35 @@
 {
   "common": {
-    "app-name": "Tailwind Task Management"
+    "cta": {
+      "add": "Ajouter"
+    },
+    "app-name": "Tailwind Task Management",
+    "task": {
+      "statuses": {
+        "todo": "À faire",
+        "in-progress": "En cours",
+        "done": "Terminé"
+      }
+    }
+  },
+  "components": {
+    "pages": {
+      "home": {
+        "task-modal": {
+          "title": "Ajouter une tâche",
+          "form": {
+            "name": {
+              "label": "Nom",
+              "placeholder": "Nom de la tâche"
+            },
+            "description": {
+              "label": "Description",
+              "placeholder": "Description de la tâche"
+            }
+          }
+        }
+      }
+    }
   },
   "pages": {
     "home": {

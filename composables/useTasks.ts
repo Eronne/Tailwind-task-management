@@ -17,7 +17,7 @@ export default () => {
       id: String(Math.random()),
       name,
       description,
-      status: TaskStatus.TODO,
+      status: TaskStatus.ToDo,
     })
   }
   const editTask = (task: Task) => {

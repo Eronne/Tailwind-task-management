@@ -1,6 +1,35 @@
 {
   "common": {
-    "app-name": "Tailwind Task Management"
+    "cta": {
+      "add": "Add"
+    },
+    "app-name": "Tailwind Task Management",
+    "task": {
+      "statuses": {
+        "todo": "To Do",
+        "in-progress": "In Progress",
+        "done": "Done"
+      }
+    }
+  },
+  "components": {
+    "pages": {
+      "home": {
+        "task-modal": {
+          "title": "Add a new task",
+          "form": {
+            "name": {
+              "label": "Name",
+              "placeholder": "Name of the task"
+            },
+            "description": {
+              "label": "Description",
+              "placeholder": "Description of the task"
+            }
+          }
+        }
+      }
+    }
   },
   "pages": {
     "home": {
@@ -9,7 +38,7 @@
       },
       "title": "No task to do | One task to do | {count} tasks to do",
       "add-task": "Add Task",
-      "no-tasks": "No tasks to display"
+      "no-task": "No tasks to display"
     }
   }
 }
