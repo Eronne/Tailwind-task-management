@@ -37,17 +37,23 @@ const statusesItems: SelectItem[] = [
         :key="task.id"
         :class="{
           'mb-4': taskIndex !== tasks.length - 1,
-          'bg-gray-50 border-gray-50': task.status === TaskStatus.ToDo,
-          'bg-warning-50 border-warning-50': task.status === TaskStatus.InProgress,
-          'bg-success-50 border-success-50': task.status === TaskStatus.Done,
+          'border-gray-50': task.status === TaskStatus.ToDo,
+          'border-warning-50': task.status === TaskStatus.InProgress,
+          'border-success-50': task.status === TaskStatus.Done,
+        }"
+        :body-class="{
+          'bg-gray-50': task.status === TaskStatus.ToDo,
+          'bg-warning-50': task.status === TaskStatus.InProgress,
+          'bg-success-50': task.status === TaskStatus.Done,
         }"
         hide-header
         hide-footer
       >
         <div class="flex justify-between align-middle mb-2">
-          <p class="self-center">
+          <NuxtLink :to="localePath(`/${task.id}`)">
             {{ task.name }}
-          </p>
+          </NuxtLink>
+
 
           <div class="flex align-middle">
             <Select v-model="task.status" :items="statusesItems" class="hidden mr-2 sm:block" />
