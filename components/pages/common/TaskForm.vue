@@ -29,10 +29,6 @@ function submit() {
 </script>
 
 <template>
-  <p class="mb-5 text-xl font-bold">
-    {{ $t('components.pages.home.task-modal.title') }}
-  </p>
-
   <div class="mb-5">
     <label for="name" class="block mb-1 font-bold">{{ $t('components.pages.home.task-modal.form.name.label') }}</label>
     <Input

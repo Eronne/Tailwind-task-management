@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ModalHeader from "~/components/ui/Modal/ModalHeader.vue";
 import type { Task } from '~/types/task'
 import TaskForm from "~/components/pages/common/TaskForm.vue";
 import Modal from '~/components/ui/Modal/Modal.vue'
@@ -35,6 +36,11 @@ function submit(task: Task) {
 
 <template>
   <Modal v-model="isOpen">
+    <ModalHeader>
+      <p class="text-xl font-bold">
+        {{ $t('components.pages.home.task-modal.title') }}
+      </p>
+    </ModalHeader>
     <ModalBody>
       <TaskForm :initial-task="initialTask" @submit="submit" />
     </ModalBody>

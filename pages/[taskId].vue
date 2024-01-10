@@ -3,11 +3,11 @@ import type { Task } from '~/types/task'
 import TaskForm from '~/components/pages/common/TaskForm.vue'
 
 const { t } = useI18n()
+const { params } = useRoute()
 useHead({
-  title: t('pages.task-id.head.title'),
+  title: t('pages.task-id.head.title', { id: params.taskId }),
 })
 
-const { params } = useRoute()
 const { editTask, tasks } = useTasks()
 const task = ref(tasks.find(task => task.id === params.taskId) ?? null)
 
@@ -30,6 +30,9 @@ function submit(task: Task) {
       </NuxtLink>
     </div>
 
+    <p class="mb-5 text-xl font-bold">
+      {{ task?.name }}
+    </p>
     <TaskForm :initial-task="task" @submit="submit" />
   </div>
 </template>
