@@ -1,0 +1,10 @@
+{
+  "common": {
+    "app-name": "Tailwind Task Management"
+  },
+  "pages": {
+    "home": {
+      "title": "Home"
+    }
+  }
+}
