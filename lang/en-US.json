@@ -2,7 +2,8 @@
   "common": {
     "cta": {
       "add": "Add",
-      "back": "Go back"
+      "back": "Go back",
+      "edit": "Edit"
     },
     "app-name": "Tailwind Task Management",
     "task": {

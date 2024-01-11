@@ -13,6 +13,7 @@ const formModel = reactive<AddTaskParams>({
   name: props.initialTask?.name ?? '',
   description: props.initialTask?.description ?? '',
 })
+const isEditing = computed(() => !!(props.initialTask as Task).id)
 const isFormValid = computed(() => {
   return formModel.name.length > 0 && formModel.description.length > 0
 })
@@ -49,7 +50,7 @@ function submit() {
 
   <div class="flex justify-end">
     <Button :disabled="!isFormValid" @click="submit">
-      {{ $t('common.cta.add') }}
+      {{ $t(`common.cta.${isEditing ? 'edit' : 'add'}`) }}
     </Button>
   </div>
 </template>
